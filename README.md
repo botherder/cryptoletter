@@ -19,11 +19,11 @@ of the mail account and the recipients. You can make one config file for each "n
 so to speak. Here's an example:
 
     tor: yes
-    host: yourmailserver.com
+    host: mail.yourdomain.com
     port: 587
-    user: your@email.com
+    user: you@yourdomain.com
     pwd: yourpassword
-    from: noreply@email.com
+    from: noreply@yourdomain.com
     recipients:
         - someone@youknow.com
         - someone.else@youknow.com
