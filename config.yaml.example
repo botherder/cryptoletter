@@ -1,0 +1,9 @@
+tor: yes
+host: mail.yourdomain.com
+port: 587
+user: you@yourdomain.com
+pwd: yourpassword
+from: noreply@yourdomain.com
+recipients:
+    - someone@youknow.com
+    - someone.else@youknow.com
