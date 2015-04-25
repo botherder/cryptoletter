@@ -1,4 +1,4 @@
-#!/usr/bin/env python !/usr/bin/env python
+#!/usr/bin/env python
 # This file is part of Cryptoletter - https://github.com/botherder/cryptoletter
 # See the file 'LICENSE' for copying permission.
 
