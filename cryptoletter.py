@@ -7,6 +7,7 @@ import sys
 import yaml
 import gnupg
 import socks
+import getpass
 import smtplib
 import datetime
 import argparse
@@ -29,7 +30,7 @@ class Email(object):
         # through Tor.
         if CFG['tor']:
             socks.setdefaultproxy(socks.PROXY_TYPE_SOCKS5, '127.0.0.1', 9050, True)
-            socks.wrapmodule(smtplib)           
+            socks.wrapmodule(smtplib)
 
         # Connecto the mail server.
         self.smtp = smtplib.SMTP(CFG['host'], CFG['port'])
@@ -124,6 +125,9 @@ if __name__ == "__main__":
     # Load the configuration from the specified file.
     with open(arg_cfg, 'r') as handle:
         CFG = yaml.load(handle.read())
+
+    # Input password.
+    CFG['pwd'] = getpass.getpass("Please insert the password for {}: " .format(CFG['user']))
 
     # Launch the scheduler.
     s = Scheduler()
